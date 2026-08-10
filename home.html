@@ -77,7 +77,7 @@
             <div class="">
                  <fieldset class="fieldset ">
                    <legend class=" font-semibold text-[15px]">Select a Bank</legend>
-                   <select class="w-full select rounded-3xl bg-[#f3f4f7]">
+                   <select id="bank-name" class="w-full select rounded-3xl bg-[#f3f4f7]">
                     <option > Select A Bank</option>
                      <option>Brac Bank</option>
                      <option>Dhaka Bank</option>
@@ -88,24 +88,24 @@
 
             <div>
                 <h1 class="font-semibold">Bank Account Number</h1>
-                <input id="" type="number" placeholder="Enter 11 digit account number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+                <input id="account-number" type="text" placeholder="Enter 11 digit account number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
 
 
             </div>
             <div>
                 <h1 class="font-semibold">Amount to Add</h1>
-                <input id="" type="number" placeholder="Add amount to withdraw" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+                <input id="amount-withdraw" type="text" placeholder="Add amount to withdraw" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
 
 
             </div>
             <div>
                 <h1 class="font-semibold">Pin Number</h1>
-                <input id="" type="number" placeholder="Add amount to withdraw" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+                <input id="pin-number" type="text" placeholder="Enter Pin Number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
 
 
             </div>
             <div>        
-                <button id="btn-login" class="btn text-white p-5  w-full rounded-3xl bg-[#0874f2]">Login</button>
+                <button id="btn-add-money" class="btn text-white p-5  w-full rounded-3xl bg-[#0874f2]">Add Money</button>
             </div>
             <div></div>
         </form>
@@ -116,6 +116,6 @@
 
 
 
-    
+    <script src="home.js"></script>
 </body>
 </html>
