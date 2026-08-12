@@ -42,26 +42,31 @@
       </div>
 
       <div class="min-h-[200px] p-3   grid gap-4 grid-cols-3">
-        <div class="border border-gray-200  rounded-2xl p-5 " >
+        <div id="add-money-card" class="border border-gray-200  rounded-2xl p-5 " >
             <img class="mx-auto" src="./assets/wallet1.png" alt="">
             <p class="text-center">add money</p>
         </div>
-        <div class="border border-gray-200  rounded-2xl p-5 " >
+
+        <div id="cash-out-card" class="border border-gray-200  rounded-2xl p-5 " >
             <img class="mx-auto" src="./assets/send1.png" alt="">
             <p class="text-center">Cashout</p>
         </div>
-        <div class="border border-gray-200  rounded-2xl p-5 " >
+
+        <div id="transfer-money-card" class="border border-gray-200  rounded-2xl p-5 " >
             <img class="mx-auto" src="./assets/money1.png" alt="">
             <p class="text-center">Transfer Money</p>
         </div>
-        <div class="border border-gray-200  rounded-2xl p-5 " >
+
+        <div id="get-bonus-card" class="border border-gray-200  rounded-2xl p-5 " >
             <img class="mx-auto" src="./assets/bonus1.png" alt="">
             <p class="text-center">Get Bonus</p>
         </div>
-        <div class="border border-gray-200  rounded-2xl p-5 " >
+
+        <div id="pay-bill-card" class="border border-gray-200  rounded-2xl p-5 " >
             <img class="mx-auto" src="./assets/purse1.png" alt="">
             <p class="text-center">Pay Bill</p>
         </div>
+
         <div class="border border-gray-200  rounded-2xl p-5 " >
             <img class="mx-auto" src="./assets/transaction1.png" alt="">
             <p class="text-center">Transactions</p>
@@ -70,10 +75,10 @@
         <!-- latest payment -->
 
     </div>
-
-    <div class="ml-5">
+ <!--  add money section -->
+    <div  id="add-money" class="ml-5">
         <h1 class="font-bold mt-3">Add Money</h1>
-        <form action="" class="bg-[#ffff] p-5 mb-3" >
+        <form action="" class="bg-[#ffff] p-5 mb-3 " >
             <div class="">
                  <fieldset class="fieldset ">
                    <legend class=" font-semibold text-[15px]">Select a Bank</legend>
@@ -111,6 +116,145 @@
         </form>
 
     </div>
+    <!-- Cash Out -->
+    <div style="display: none;" id="cash-out" class="ml-5">
+        <h1 class="font-bold mt-3">Cash Out</h1>
+        <form action="" class="bg-[#ffff] p-5 mb-3 " >
+            <!-- <div class="">
+                 <fieldset class="fieldset ">
+                   <legend class=" font-semibold text-[15px]">Select a Bank</legend>
+                   <select id="bank-name" class="w-full select rounded-3xl bg-[#f3f4f7]">
+                    <option > Select A Bank</option>
+                     <option>Brac Bank</option>
+                     <option>Dhaka Bank</option>
+                     <option>AB Bank</option>
+                   </select>
+                  </fieldset>
+            </div> -->
+
+            <div>
+                <h1 class="font-semibold">Agent Number</h1>
+                <input id="account-number" type="text" placeholder="Enter 11 digit number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>
+                <h1 class="font-semibold">Amount</h1>
+                <input id="amount-withdraw" type="text" placeholder="Enter amount to withdraw" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>
+                <h1 class="font-semibold">Pin Number</h1>
+                <input id="pin-number" type="text" placeholder="Enter 4 digit pin number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>        
+                <button id="" class="btn text-white p-5  w-full rounded-3xl bg-[#0874f2]">Withdraw Money</button>
+            </div>
+            <div></div>
+        </form>
+
+    </div>
+
+    <!-- transfer money -->
+         <div style="display: none;"  id="transfer-money" class="ml-5">
+        <h1 class="font-bold mt-3">Transfer Money</h1>
+        <form action="" class="bg-[#ffff] p-5 mb-3 " >
+
+            <div>
+                <h1 class="font-semibold">User Account</h1>
+                <input id="account-number" type="text" placeholder="Enter 11 digit number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>
+                <h1 class="font-semibold">Amount</h1>
+                <input id="amount-withdraw" type="text" placeholder="Enter amount to withdraw" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>
+                <h1 class="font-semibold">Pin Number</h1>
+                <input id="pin-number" type="text" placeholder="Enter 4 digit pin number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>        
+                <button id="" class="btn text-white p-5  w-full rounded-3xl bg-[#0874f2]">Send Money</button>
+            </div>
+            <div></div>
+        </form>
+
+    </div>
+
+        <!-- Get Bonus -->
+     <div style="display: none;"  id="get-bonus" class="ml-5">
+        <h1 class="font-bold mt-3">Get Bonus</h1>
+        <form action="" class="bg-[#ffff] p-5 mb-3 " >
+
+
+            <div>
+                <h1 class="font-semibold">Enter Bonus Coupon</h1>
+                <input id="amount-withdraw" type="text" placeholder="Enter Your Bonus Coupon" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+ 
+                <button id="" class="btn text-white p-5  w-full rounded-3xl bg-[#0874f2]">Get Bonus</button>
+            </div>
+            <div></div>
+         </form>
+     </div>
+
+
+     <!-- Pay bill -->
+ <div style="display: none;"  id="pay-bill" class="ml-5">
+        <h1 class="font-bold mt-3">Pay Bill</h1>
+        <form action="" class="bg-[#ffff] p-5 mb-3 " >
+            <div class="">
+                 <fieldset class="fieldset ">
+                   <legend class=" font-semibold text-[15px]">Select to Pay</legend>
+                   <select id="bank-name" class="w-full select rounded-3xl bg-[#f3f4f7]">
+                    <option > Select A Bank</option>
+                     <option>Brac Bank</option>
+                     <option>Dhaka Bank</option>
+                     <option>AB Bank</option>
+                   </select>
+                  </fieldset>
+            </div>
+
+            <div>
+                <h1 class="font-semibold">Biller Account Number</h1>
+                <input id="account-number" type="text" placeholder="Enter 11 digit account number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>
+                <h1 class="font-semibold">Amount to Pay</h1>
+                <input id="amount-withdraw" type="text" placeholder="Enter amount to pay" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>
+                <h1 class="font-semibold">Pin Number</h1>
+                <input id="pin-number" type="text" placeholder="Enter Pin Number" class=" p-5 w-full input mt-3 mb-5 rounded-3xl bg-[#f3f4f7]" />   <br>
+
+
+            </div>
+            <div>        
+                <button id="btn-add-money" class="btn text-white p-5  w-full rounded-3xl bg-[#0874f2]">Add Money</button>
+            </div>
+            <div></div>
+        </form>
+
+    </div>
+
+
+    
+
+
 
 
 

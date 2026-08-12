@@ -37,3 +37,51 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
  
   
 })
+
+
+document.getElementById('add-money-card').addEventListener('click', function(){
+    document.getElementById('cash-out').style.display = 'none';
+
+    document.getElementById('add-money').style.display= 'block';
+        document.getElementById('transfer-money').style.display= 'none';
+        document.getElementById('get-bonus').style.display= 'none';
+            document.getElementById('pay-bill').style.display= 'none';
+
+
+})
+
+document.getElementById('cash-out-card').addEventListener('click',function(){
+    document.getElementById('add-money').style.display= 'none';
+
+    document.getElementById('cash-out').style.display= 'block';
+        document.getElementById('transfer-money').style.display= 'none';
+        document.getElementById('get-bonus').style.display= 'none';
+            document.getElementById('pay-bill').style.display= 'none';
+
+})
+
+
+document.getElementById('transfer-money-card').addEventListener('click', function(){
+    document.getElementById('add-money').style.display= 'none';    
+    document.getElementById('cash-out').style.display = 'none';    
+    document.getElementById('transfer-money').style.display= 'block';
+    document.getElementById('get-bonus').style.display= 'none';
+        document.getElementById('pay-bill').style.display= 'none';
+
+})
+
+document.getElementById('get-bonus-card').addEventListener('click', function(){
+    document.getElementById('add-money').style.display= 'none';    
+    document.getElementById('cash-out').style.display = 'none';    
+    document.getElementById('transfer-money').style.display= 'none';
+    document.getElementById('get-bonus').style.display= 'block';
+        document.getElementById('pay-bill').style.display= 'none';
+
+})
+document.getElementById('pay-bill-card').addEventListener('click', function(){
+    document.getElementById('add-money').style.display= 'none';    
+    document.getElementById('cash-out').style.display = 'none';    
+    document.getElementById('transfer-money').style.display= 'none';
+    document.getElementById('get-bonus').style.display= 'none';
+    document.getElementById('pay-bill').style.display= 'block';
+})
