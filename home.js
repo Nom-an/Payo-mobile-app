@@ -1,5 +1,23 @@
 
 const pin = 1234;
+
+// function to get input value number
+
+function getInputValue(id){
+    const getInput = document.getElementById(id);
+    const getInputValue = getInput.value;
+    const getInputValueNumber = parseInt(getInputValue);
+    return getInputValueNumber;
+
+}
+
+
+
+
+
+
+
+
 document.getElementById('btn-add-money').addEventListener('click', function(e){
     e.preventDefault();
 
@@ -7,8 +25,8 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
     
     const accountNumber = document.getElementById('account-number').value;
 
-    const amountWithdraw = parseInt(document.getElementById('amount-withdraw').value);
-
+    const amountToAdd =getInputValue('amount-to-add');
+    console.log(amountToAdd);
     const pinNumber = parseInt(document.getElementById('pin-number').value);
 
     // console.log(bankName,accountNumber, amountWithdraw , pinNumber);
@@ -21,13 +39,14 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
 
 
     const amount = parseInt(document.getElementById('amount').innerText);
+
         if(accountNumber.length < 11){
         alert("Please enter valid account number");
         return;
     }
 
 
-    const newAmount = amount + amountWithdraw;
+    const newAmount = amount + amountToAdd;
 
     document.getElementById('amount').innerText= newAmount;
     // console.log(newAmount)
