@@ -85,3 +85,22 @@ document.getElementById('pay-bill-card').addEventListener('click', function(){
     document.getElementById('get-bonus').style.display= 'none';
     document.getElementById('pay-bill').style.display= 'block';
 })
+
+document.getElementById('btn-withdraw-money').addEventListener('click', function(e){
+    e.preventDefault();
+
+    const AmountToWithdraw = parseInt(document.getElementById('amount-to-withdraw').value);
+    
+    const pinWithdraw = parseInt(document.getElementById('pin-withdraw').value);
+
+    if(pin != pinWithdraw){
+        alert('enter your valid pin number');
+        return;
+
+    }
+
+    const afterWithdrawAmount = parseInt(document.getElementById('amount').innerText) - AmountToWithdraw;
+
+    document.getElementById('amount').innerText = afterWithdrawAmount;
+
+})
