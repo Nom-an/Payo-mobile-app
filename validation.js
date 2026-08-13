@@ -8,5 +8,19 @@ else{
     console.log('value is not a number ');
 }
 
+//number 
+
+const num = 12;
+if(typeof num === 'number'){
+    console.log('value is a number ');
+}
+else{
+    console.log('value is not a number');
+}
+
+
+const numbers = [1,2,3,4,5];
+
+console.log(typeof numbers);
 
 
