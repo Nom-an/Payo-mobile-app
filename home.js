@@ -1,5 +1,6 @@
 
 const pin = 1234;
+const transectionData  = [];
 
 // function to get input value number
 
@@ -10,6 +11,19 @@ function getInputValue(id){
     return getInputValueNumber;
 
 }
+
+function getInputValueAc(id){
+    const getInput = document.getElementById(id);
+    const getInputValue = getInput.value;
+
+    return getInputValue;
+
+}
+
+//SET INNER TXT 
+
+
+
 
 
 
@@ -23,11 +37,12 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
 
     const bankName = document.getElementById('bank-name').value;
     
-    const accountNumber = document.getElementById('account-number').value;
+    const accountNumber = getInputValueAc('account-number');
+    
 
     const amountToAdd =getInputValue('amount-to-add');
     console.log(amountToAdd);
-    const pinNumber = parseInt(document.getElementById('pin-number').value);
+    const pinNumber = getInputValue('pin-number');
 
     // console.log(bankName,accountNumber, amountWithdraw , pinNumber);
 
@@ -36,14 +51,16 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
         return;
 
     }
+       if( accountNumber.length < 11){
+
+        alert("Please enter valid account number");
+        return;
+    }
+
 
 
     const amount = parseInt(document.getElementById('amount').innerText);
 
-        if(accountNumber.length < 11){
-        alert("Please enter valid account number");
-        return;
-    }
 
 
     const newAmount = amount + amountToAdd;
@@ -51,7 +68,14 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
     document.getElementById('amount').innerText= newAmount;
     // console.log(newAmount)
 
+ const data = {
+    name : "add money",
+    date : new Date().toLocaleString()
+ }
 
+ transectionData.push(data);
+
+ console.log(transectionData);
 
  
   
@@ -105,21 +129,60 @@ document.getElementById('pay-bill-card').addEventListener('click', function(){
     document.getElementById('pay-bill').style.display= 'block';
 })
 
+
+
+
+
+// CashOut Section
+
+
 document.getElementById('btn-withdraw-money').addEventListener('click', function(e){
     e.preventDefault();
 
-    const AmountToWithdraw = parseInt(document.getElementById('amount-to-withdraw').value);
+
+    const AmountToWithdrawCashOut = parseInt(document.getElementById('amount-to-withdraw-cash-out').value);
+ 
     
-    const pinWithdraw = parseInt(document.getElementById('pin-withdraw').value);
+    const pinWithdraw =  getInputValue('pin-withdraw');
+
+
+
+
+
+
+
+ 
+
+
+
 
     if(pin != pinWithdraw){
-        alert('enter your valid pin number');
+        alert("enter valid pin number");
         return;
 
     }
 
-    const afterWithdrawAmount = parseInt(document.getElementById('amount').innerText) - AmountToWithdraw;
+
+
+
+
+
+
+
+
+
+    const afterWithdrawAmount = parseInt(document.getElementById('amount').innerText) - AmountToWithdrawCashOut;
+
 
     document.getElementById('amount').innerText = afterWithdrawAmount;
+
+     const data = {
+    name : "cash out",
+    date : new Date().toLocaleString()
+ }
+
+ transectionData.push(data);
+ console.log(transectionData)
+
 
 })

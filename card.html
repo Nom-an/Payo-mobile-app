@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+    
+    <div class="grid grid-cols-3 gap-5 min-h-20 ">
+        <div id="noman" class="bg-cyan-200 text-center justify-center items-center">
+            <h1>Noman</h1>
+            <p>My name is noman</p>
+        </div>
+        <div id="akanda" class="bg-amber-200 text-center">
+            <h1>akanda</h1>
+            <p>My name is noman</p>
+        </div>
+        <div id="add" class="bg-blue-200 text-center">
+            <h1>add</h1>
+            <p>My name is noman</p>
+        </div>
+
+    </div>
+
+    <div style="display: none;" id="n" class="form">
+        <h1>noman</h1>
+    </div>
+
+    <div style="display: none;" id="a" class="form">
+        <h1>akanda</h1>
+    </div>
+
+    <div style="display: none;" id="ad" class="form">
+        <h1>add</h1>
+    </div>
+
+
+
+<script>
+    function form(n){
+        const ff = document.getElementsByClassName('form');
+        for(f of ff){
+            f.style.display = 'none';
+        }
+
+        document.getElementById(n).style.display= 'block';
+
+
+
+
+    }
+
+
+    document.getElementById('noman').addEventListener('click',function(){
+        form('n')
+    })
+    document.getElementById('akanda').addEventListener('click',function(){
+        form('a')
+    })
+    document.getElementById('add').addEventListener('click',function(){
+        form('ad')
+    })
+
+   
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>
